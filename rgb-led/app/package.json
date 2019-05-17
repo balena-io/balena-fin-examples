@@ -13,7 +13,7 @@
     "strict": true
   },
   "dependencies": {
-    "chalk": "~2.4.0",
-    "onoff": "~3.0.2"
+    "chalk": "~2.4.2",
+    "onoff": "~4.1.1"
   }
 }
