@@ -2,7 +2,7 @@
 # Base image
 ################################################################################
 
-FROM balenalib/raspberrypi3:build as base
+FROM balenalib/fincm3:build as base
 
 ENV INITSYSTEM=on
 ENV DEBIAN_FRONTEND=noninteractive
@@ -61,7 +61,7 @@ RUN strip target/release/fin
 ################################################################################
 # Node module builder
 ################################################################################
-FROM balenalib/raspberrypi3-node:10-build AS nodebuild
+FROM balenalib/fincm3-node:10-build AS nodebuild
 
 # Defines our working directory in container
 WORKDIR /usr/src/app
@@ -77,7 +77,7 @@ RUN npm install --unsafe-perm --production && npm cache clean --force
 ################################################################################
 # Final image
 ################################################################################
-FROM balenalib/raspberrypi3-node:10
+FROM balenalib/fincm3-node:10
 
 WORKDIR /usr/src/app
 
