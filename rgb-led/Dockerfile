@@ -1,4 +1,4 @@
-FROM balenalib/raspberrypi3-node:build AS build
+FROM balenalib/raspberrypi3-node:10-build AS build
 
 # Defines our working directory in container
 WORKDIR /usr/src/app
@@ -10,7 +10,7 @@ COPY ./app/package.json package.json
 RUN install_packages python
 RUN npm install --unsafe-perm --production && npm cache clean --force
 
-FROM balenalib/raspberrypi3-node
+FROM balenalib/raspberrypi3-node:10
 
 WORKDIR /usr/src/app
 
