@@ -1,4 +1,4 @@
-FROM balenalib/raspberrypi3-debian
+FROM balenalib/raspberrypi3-debian:stretch
 
 # Defines our working directory in container
 WORKDIR /usr/src/app
