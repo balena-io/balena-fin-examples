@@ -17,6 +17,7 @@ To get started with this application, open the serial interface with `screen /de
 ## Further Development
 
 To develop custom applications for the coprocessor module it is recommended to download Simplicity Studio from Silicon labs website.
+You can then uncompress the [ble-scan](/src/ble-scan.sls) file and import this into Simplicity Studio as a template project.
 
 Notes:
 
