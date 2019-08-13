@@ -2,15 +2,23 @@
 {
   let self;
 
+  const gi = require('node-gtk');
+  Fin = gi.require('Fin', '0.2');
+  const fin = new Fin.Client()
   const fs = require('fs');
-  const child_process = require("child_process");
   const Gpio = require('onoff').Gpio;
-  const fin_version = child_process.execSync('fin version').toString().trim();
+  const BALENA_FIN_REVISION = fin.revision;
+
 
   let rgb = function() {
     'use strict';
     if (!(this instanceof rgb)) return new rgb();
     self = this;
+    var fin_version = '1.0';
+
+    if (BALENA_FIN_REVISION >= '10') {
+      fin_version = '1.1';
+    }
 
     // First, figure out if we are running on a v1.0 or v1.1 balenaFin
     // The v1.0 has LEDs connected via GPIO, whereas the v1.1 has a PCA9633 LED controller IC
