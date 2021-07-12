@@ -1,6 +1,8 @@
 # balena-fin-examples
 A collection of examples for balenaFin wrapped as a multi-container balenaCloud application. This collection will be improved with more examples over time, make sure to check it out from time to time!
 
+[![deploy button](https://balena.io/deploy.svg)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/balena-io-hardware/balena-fin-examples&defaultDeviceType=fincm3)
+
 Service | What it does
 ------------ | ------------
 wifi-connect | if the balenaFin is not connected, exposes a WiFi access point with Captive Portal ( SSID: `balenaFin`, PSK: `balenaFin`) that allows the configuration of WiFi credentials. For more info, please refer to the [wifi-connect repository](https://github.com/balena-io/wifi-connect)
